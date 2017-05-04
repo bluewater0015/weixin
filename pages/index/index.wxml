@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="box" wx:if="{{isShow}}">
+  <view class="current_city center">
+    <text>
+      <text>当前城市:</text>
+      <text bindtap="getLocationEvent">{{city}}</text>
+    </text>
+  </view>
+  <view class="start_box space_between">
+    <text class="circle">起点:</text>
+    <text bindtap="leapEvent">从哪儿出发</text>
+  </view>
+  <view class="end_box space_between">
+    <text class="position">终点:</text>
+    <text bindtap="goEvent">要去哪儿</text>
+  </view>
+  <view class="btn_box center">
+    <button class="btn_search center" bindtap="searchEvent">
+      查询      
+    </button>
+  </view>
+</view>
+<!--输入框模块 请输入起点-->
+<view class="search_box" wx:if="{{!isShow}}">
+  <view class="search center">
+    <input bindtap="leapEvent" type="number" placeholder="请输入起点" />
+  </view>
+</view>
+<!--输入框模块 请输入终点-->
+<view class="center">
+  <input type="number" placeholder="请输入终点" />
+</view>

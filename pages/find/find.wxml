@@ -1,0 +1,4 @@
+<!--pages/find/find.wxml-->
+<view class="center site">
+    <input type="number" placeholder="请输入站点名称" />
+</view>
